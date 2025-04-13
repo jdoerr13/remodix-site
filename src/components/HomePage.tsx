@@ -129,6 +129,18 @@ export default function HomePage() {
               <h4 className="text-xl font-semibold mb-2 text-purple-700">Custom Carpentry</h4>
               <p className="text-gray-700">Bespoke storage, shelving, and built-ins that fit your space and style.</p>
             </div>
+            <div className="bg-white bg-opacity-90 p-6 rounded-xl shadow text-center">
+                <h4 className="text-xl font-semibold mb-2 text-purple-700">Flooring Renovation</h4>
+                <p className="text-gray-700">High-quality flooring solutions from tile to luxury vinyl, expertly installed to elevate your space.</p>
+            </div>
+                <div className="bg-white bg-opacity-90 p-6 rounded-xl shadow text-center">
+                <h4 className="text-xl font-semibold mb-2 text-purple-700">Painting & Drywall Repair</h4>
+                <p className="text-gray-700">Smooth finishes, precision lines, and vibrant colors to complete your remodel beautifully.</p>
+            </div>
+            <div className="bg-white bg-opacity-90 p-6 rounded-xl shadow text-center">
+                <h4 className="text-xl font-semibold mb-2 text-purple-700">Outdoor Living Spaces</h4>
+                <p className="text-gray-700">Design and build inviting outdoor areas including patios, pergolas, and stylish lanais for year-round enjoyment.</p>
+            </div>
           </div>
         </div>
       </section>
