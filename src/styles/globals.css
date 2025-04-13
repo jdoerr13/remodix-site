@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --font-primary: 'Cinzel', serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-primary), Georgia, serif;
+  background: linear-gradient(to bottom, #f3f4f6, #e9d5ff);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@keyframes spin-y {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+@layer utilities {
+  .animate-spin-y-slow {
+    animation: spin-y 8s linear infinite;
+    transform-style: preserve-3d;
+  }
+}
