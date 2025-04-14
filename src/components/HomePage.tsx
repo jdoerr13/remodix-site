@@ -33,16 +33,16 @@ export default function HomePage() {
   };
 
   return (
-    <div className="font-brand text-gray-800 bg-gradient-to-b from-gray-100 to-purple-200 min-h-screen">
+    <div className="font-brand text-gray-800 bg-gradient-to-b from-gray-100 to-purple-200 min-h-screen overflow-x-hidden">
       {/* Sticky Header */}
       <header className="sticky top-0 z-50 bg-white shadow-md py-4 px-4 sm:px-6 flex justify-between items-center flex-wrap">
         <h1 className="text-2xl font-bold tracking-wide text-purple-700">REMODIX</h1>
-        <nav className="flex flex-wrap gap-4 text-base sm:text-lg font-semibold text-gray-700 mt-4 sm:mt-0">
-          <Link href="#home">Home</Link>
-          <Link href="#about">About</Link>
-          <Link href="#services">Services</Link>
-          <Link href="#projects">Projects</Link>
-          <Link href="#contact">Contact</Link>
+        <nav className="flex flex-wrap gap-4 sm:gap-6 text-sm sm:text-base font-semibold text-gray-700 mt-4 sm:mt-0">
+          <Link href="#home" className="hover:underline">Home</Link>
+          <Link href="#about" className="hover:underline">About</Link>
+          <Link href="#services" className="hover:underline">Services</Link>
+          <Link href="#projects" className="hover:underline">Projects</Link>
+          <Link href="#contact" className="hover:underline">Contact</Link>
         </nav>
       </header>
 
@@ -57,7 +57,7 @@ export default function HomePage() {
         }}
       >
         {/* Spinning Logo in Top-Right Corner */}
-        <div className="fixed top-24 right-4 z-50 w-[100px] h-[100px] animate-spin-y-slow">
+        {/* <div className="fixed top-24 right-4 z-50 w-[100px] h-[100px] animate-spin-y-slow">
           <Image
             src="/images/logo2.png"
             alt="Remodix Spinning Logo"
@@ -66,16 +66,17 @@ export default function HomePage() {
             className="rounded-full"
             priority
           />
-        </div>
+        </div> */}
 
-        {/* Spinning Logo in Top-Left Corner */}
-        
+        {/* Spinning Logos */}
         <div className="fixed top-24 right-4 z-50 w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] animate-spin-y-slow">
           <Image src="/images/logo2.png" alt="Remodix Spinning Logo" width={100} height={100} className="rounded-full" priority />
         </div>
         <div className="fixed top-24 left-4 z-50 w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] animate-spin-y-slow">
           <Image src="/images/logo2.png" alt="Remodix Spinning Logo" width={100} height={100} className="rounded-full" priority />
         </div>
+
+
         <div className="bg-black bg-opacity-50 p-6 sm:p-8 rounded-xl">
           <h2 className="text-3xl sm:text-5xl font-bold mb-4">Elevate Your Space with Remodix</h2>
           <p className="text-md sm:text-xl mb-6 max-w-xl mx-auto">
@@ -132,7 +133,7 @@ export default function HomePage() {
 
       {/* Projects Section with Image Toggle */}
       <section id="projects" className="py-20 px-6 text-center">
-        <h3 className="text-5xl font-bold text-gray-800 mb-4">Click to Reveal the Remodix Transformation</h3>
+      <h3 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4 text-center">Click to Reveal the Remodix Transformation</h3>
         <p className="text-2xl text-center text-gray-500 mb-10">
           Real homes. Real results. Click any photo to see the after.
         </p>
