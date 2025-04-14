@@ -35,9 +35,9 @@ export default function HomePage() {
   return (
     <div className="font-brand text-gray-800 bg-gradient-to-b from-gray-100 to-purple-200 min-h-screen">
       {/* Sticky Header */}
-      <header className="sticky top-0 z-50 bg-white shadow-md py-4 px-6 flex justify-between items-center">
+      <header className="sticky top-0 z-50 bg-white shadow-md py-4 px-4 sm:px-6 flex justify-between items-center flex-wrap">
         <h1 className="text-2xl font-bold tracking-wide text-purple-700">REMODIX</h1>
-        <nav className="space-x-6 text-lg font-semibold text-gray-700">
+        <nav className="flex flex-wrap gap-4 text-base sm:text-lg font-semibold text-gray-700 mt-4 sm:mt-0">
           <Link href="#home">Home</Link>
           <Link href="#about">About</Link>
           <Link href="#services">Services</Link>
@@ -69,25 +69,19 @@ export default function HomePage() {
         </div>
 
         {/* Spinning Logo in Top-Left Corner */}
-        <div className="fixed top-24 left-4 z-50 w-[100px] h-[100px] animate-spin-y-slow">
-          <Image
-            src="/images/logo2.png"
-            alt="Remodix Spinning Logo"
-            width={100}
-            height={100}
-            className="rounded-full"
-            priority
-          />
+        
+        <div className="fixed top-24 right-4 z-50 w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] animate-spin-y-slow">
+          <Image src="/images/logo2.png" alt="Remodix Spinning Logo" width={100} height={100} className="rounded-full" priority />
         </div>
-
-        <div className="bg-black bg-opacity-50 p-8 rounded-xl">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4">Elevate Your Space with Remodix</h2>
-          <p className="text-lg sm:text-xl mb-6 max-w-xl mx-auto">
+        <div className="fixed top-24 left-4 z-50 w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] animate-spin-y-slow">
+          <Image src="/images/logo2.png" alt="Remodix Spinning Logo" width={100} height={100} className="rounded-full" priority />
+        </div>
+        <div className="bg-black bg-opacity-50 p-6 sm:p-8 rounded-xl">
+          <h2 className="text-3xl sm:text-5xl font-bold mb-4">Elevate Your Space with Remodix</h2>
+          <p className="text-md sm:text-xl mb-6 max-w-xl mx-auto">
             South Florida’s premier remodeling and renovation experts.
           </p>
-          <a
-            href="#contact"
-            className="bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 text-white rounded-full text-lg font-semibold hover:opacity-90 transition" >
+          <a href="#contact" className="bg-gradient-to-r from-purple-500 to-pink-500 px-5 py-3 sm:px-6 text-white rounded-full text-base sm:text-lg font-semibold hover:opacity-90 transition">
             Request a Free Consultation
           </a>
         </div>
@@ -95,28 +89,18 @@ export default function HomePage() {
 
 
 
-      {/* About & Services Section with Background */}
-      <section
-        className="bg-fixed bg-center bg-cover py-20 px-6"
-        style={{ backgroundImage: "url('/images/south-florida.jpg')" }}
-      >
-        {/* About Section */}
-        <div id="about" className="py-20 px-6 max-w-5xl mx-auto text-center scroll-mt-28">
-            <h3 className="text-5xl font-extrabold text-white mb-6 drop-shadow-[2px_2px_0px_rgba(0,0,0,0.9)]">
-            About Us
-            </h3>
-            <p className="text-xl text-purple-900 font-medium leading-relaxed max-w-3xl mx-auto bg-white/70 px-4 py-3 rounded-xl shadow-md">
+         {/* About & Services Section with Background */}
+         <section className="bg-fixed bg-center bg-cover py-16 sm:py-20 px-4 sm:px-6" style={{ backgroundImage: "url('/images/south-florida.jpg')" }}>
+        <div id="about" className="py-16 sm:py-20 px-4 sm:px-6 max-w-5xl mx-auto text-center scroll-mt-28">
+          <h3 className="text-4xl sm:text-5xl font-extrabold text-white mb-6 drop-shadow-[2px_2px_0px_rgba(0,0,0,0.9)]">About Us</h3>
+          <p className="text-lg sm:text-xl text-purple-900 font-medium leading-relaxed max-w-3xl mx-auto bg-white/70 px-4 py-3 rounded-xl shadow-md">
             Remodix combines design expertise with premium craftsmanship to deliver kitchens, bathrooms, and living spaces that reflect your unique style and needs.
-            </p>
+          </p>
         </div>
 
-        {/* Services Section */}
-        <div id="services" className="py-20 px-6 max-w-6xl mx-auto scroll-mt-28">
-            <h3 className="text-5xl font-extrabold text-white text-center mb-12 drop-shadow-[2px_2px_0px_rgba(0,0,0,0.9)]">
-            Our Services
-            </h3>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div id="services" className="py-16 sm:py-20 px-4 sm:px-6 max-w-6xl mx-auto scroll-mt-28">
+          <h3 className="text-4xl sm:text-5xl font-extrabold text-white text-center mb-12 drop-shadow-[2px_2px_0px_rgba(0,0,0,0.9)]">Our Services</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white bg-opacity-90 p-6 rounded-xl shadow text-center">
               <h4 className="text-xl font-semibold mb-2 text-purple-700">Kitchen Remodeling</h4>
               <p className="text-gray-700">Transform your kitchen into a functional, stylish centerpiece for your home.</p>
@@ -130,22 +114,20 @@ export default function HomePage() {
               <p className="text-gray-700">Bespoke storage, shelving, and built-ins that fit your space and style.</p>
             </div>
             <div className="bg-white bg-opacity-90 p-6 rounded-xl shadow text-center">
-                <h4 className="text-xl font-semibold mb-2 text-purple-700">Flooring Renovation</h4>
-                <p className="text-gray-700">High-quality flooring solutions from tile to luxury vinyl, expertly installed to elevate your space.</p>
-            </div>
-                <div className="bg-white bg-opacity-90 p-6 rounded-xl shadow text-center">
-                <h4 className="text-xl font-semibold mb-2 text-purple-700">Painting & Drywall Repair</h4>
-                <p className="text-gray-700">Smooth finishes, precision lines, and vibrant colors to complete your remodel beautifully.</p>
+              <h4 className="text-xl font-semibold mb-2 text-purple-700">Flooring Renovation</h4>
+              <p className="text-gray-700">High-quality flooring solutions from tile to luxury vinyl, expertly installed to elevate your space.</p>
             </div>
             <div className="bg-white bg-opacity-90 p-6 rounded-xl shadow text-center">
-                <h4 className="text-xl font-semibold mb-2 text-purple-700">Outdoor Living Spaces</h4>
-                <p className="text-gray-700">Design and build inviting outdoor areas including patios, pergolas, and stylish lanais for year-round enjoyment.</p>
+              <h4 className="text-xl font-semibold mb-2 text-purple-700">Painting & Drywall Repair</h4>
+              <p className="text-gray-700">Smooth finishes, precision lines, and vibrant colors to complete your remodel beautifully.</p>
+            </div>
+            <div className="bg-white bg-opacity-90 p-6 rounded-xl shadow text-center">
+              <h4 className="text-xl font-semibold mb-2 text-purple-700">Outdoor Living Spaces</h4>
+              <p className="text-gray-700">Design and build inviting outdoor areas including patios, pergolas, and stylish lanais for year-round enjoyment.</p>
             </div>
           </div>
         </div>
       </section>
-
-
 
 
       {/* Projects Section with Image Toggle */}
