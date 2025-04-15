@@ -168,51 +168,43 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Contact Form */}
-      <section id="contact" className="py-20 px-6 bg-white text-center">
+    {/* Contact Form */}
+    <section id="contact" className="py-20 px-6 bg-white text-center">
         <h3 className="text-3xl font-bold text-gray-800 mb-6">Contact Us</h3>
         <p className="text-gray-600 mb-4">Let’s bring your vision to life. Reach out to get started today!</p>
 
-        <form
-          action="https://formspree.io/f/xeoankzg"
-          method="POST"
-          className="space-y-5 text-left max-w-md mx-auto"
-        >
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            className="w-full border p-3 rounded-xl"
-            required
-          />
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Your Phone Number"
-            className="w-full border p-3 rounded-xl"
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            className="w-full border p-3 rounded-xl"
-            required
-          />
-          <textarea
-            name="message"
-            placeholder="Tell us about your vision..."
-            rows={4}
-            className="w-full border p-3 rounded-xl"
-            required
-          ></textarea>
-          <button
-            type="submit"
-            className="w-full bg-purple-600 text-white py-3 rounded-xl font-semibold hover:bg-purple-700 transition"
+        <div className="w-full flex flex-col sm:flex-row justify-center items-center gap-10 mb-10">
+          {/* Custom Design - Left Side */}
+          <div className="flex flex-col items-center text-center">
+            <Image src="/images/custom-design.png" 
+            alt="Custom Design" 
+            width={180} 
+            height={180} 
+            className="rounded-xl shadow-2xl" />
+            <p className="text-lg text-gray-800 font-semibold mt-2 italic">Custom Design</p>
+          </div>
+
+          {/* Contact Form - Center */}
+          <form
+            action="https://formspree.io/f/xeoankzg"
+            method="POST"
+            className="space-y-5 text-left max-w-md w-full"
           >
-            Send Inquiry
-          </button>
-        </form>
+            <input type="text" name="name" placeholder="Your Name" className="w-full border p-3 rounded-xl" required />
+            <input type="tel" name="phone" placeholder="Your Phone Number" className="w-full border p-3 rounded-xl" required />
+            <input type="email" name="email" placeholder="Your Email" className="w-full border p-3 rounded-xl" required />
+            <textarea name="message" placeholder="Tell us about your vision..." rows={4} className="w-full border p-3 rounded-xl" required></textarea>
+            <button type="submit" className="w-full bg-purple-600 text-white py-3 rounded-xl font-semibold hover:bg-purple-700 transition">
+              Send Inquiry
+            </button>
+          </form>
+
+          {/* Permitting & Licensed - Right Side */}
+          <div className="flex flex-col items-center text-center">
+            <Image src="/images/contractor-badge.png" alt="Permitting and Licensed" width={180} height={180} className="rounded-xl shadow-2xl" />
+            <p className="text-lg text-gray-800 font-semibold mt-2 italic">Permitting & Licensed</p>
+          </div>
+        </div>
 
         <div className="mb-4 text-lg font-semibold text-purple-700">
           Call us now: <a href="tel:3058907637" className="underline hover:text-purple-900">305-890-7637</a>
