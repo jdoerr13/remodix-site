@@ -34,44 +34,45 @@ export default function HomePage() {
 
   return (
     <div className="font-brand text-gray-800 bg-gradient-to-b from-gray-100 to-purple-200 min-h-screen overflow-x-hidden">
-      {/* Sticky Header */}
-      <header className="sticky top-0 z-50 bg-white shadow-md py-4 px-4 sm:px-6 flex justify-between items-center flex-wrap">
-        <h1 className="text-2xl font-bold tracking-wide text-purple-700">REMODIX</h1>
-        <nav className="flex flex-wrap gap-4 sm:gap-6 text-sm sm:text-base font-semibold text-gray-700 mt-4 sm:mt-0">
-          <Link href="#home" className="hover:underline">Home</Link>
-          <Link href="#about" className="hover:underline">About</Link>
-          <Link href="#services" className="hover:underline">Services</Link>
-          <Link href="#projects" className="hover:underline">Projects</Link>
-          <Link href="#contact" className="hover:underline">Contact</Link>
-        </nav>
-      </header>
+      {/* Header */}
+      <header className="bg-white shadow-md">
+  <div className="flex justify-between items-center px-4 sm:px-6 py-3">
+    <h1 className="text-2xl font-bold tracking-wide text-purple-700">REMODIX</h1>
+    <nav className="flex gap-4 sm:gap-6 text-base sm:text-lg font-semibold text-gray-700">
+      <Link href="#home" className="hover:underline">Home</Link>
+      <Link href="#about" className="hover:underline">About</Link>
+      <Link href="#services" className="hover:underline">Services</Link>
+      <Link href="#projects" className="hover:underline">Projects</Link>
+      <Link href="#contact" className="hover:underline">Contact</Link>
+    </nav>
+  </div>
+</header>
 
       {/* Hero Section */}
       <section
         id="home"
         className="relative h-[80vh] flex flex-col items-center justify-center text-center text-white bg-black bg-opacity-40"
         style={{
-          backgroundImage: "url('/images/hero-background.jpg')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+            backgroundImage: "url('/images/hero-background.jpg')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
         }}
-      >
-        {/* Spinning Logo in Top-Right Corner */}
-        {/* <div className="fixed top-24 right-4 z-50 w-[100px] h-[100px] animate-spin-y-slow">
-          <Image
-            src="/images/logo2.png"
-            alt="Remodix Spinning Logo"
-            width={100}
-            height={100}
-            className="rounded-full"
-            priority
-          />
-        </div> */}
+        >
+
 
         {/* Spinning Logos */}
         <div className="fixed top-24 right-4 z-50 w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] animate-spin-y-slow">
           <Image src="/images/logo2.png" alt="Remodix Spinning Logo" width={100} height={100} className="rounded-full" priority />
         </div>
+                {/* Floating Contact Button */}
+                <div className="fixed top-[200px] right-4 z-50">
+                    <a
+                        href="#contact"
+                        className="bg-white/60 text-purple-800 px-4 py-2 rounded-full shadow-md backdrop-blur-md hover:bg-white/80 transition text-sm sm:text-base font-semibold border border-purple-300"
+                    > Contact Us
+                    </a>
+                </div>
+
         <div className="fixed top-24 left-4 z-50 w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] animate-spin-y-slow">
           <Image src="/images/logo2.png" alt="Remodix Spinning Logo" width={100} height={100} className="rounded-full" priority />
         </div>
@@ -207,7 +208,8 @@ export default function HomePage() {
         </div>
 
         <div className="mb-4 text-lg font-semibold text-purple-700">
-          Call us now: <a href="tel:3058907637" className="underline hover:text-purple-900">305-890-7637</a>
+            Call us now: <a href="tel:3058907637" className="underline hover:text-purple-900">305-890-7637</a><br />
+            Email us: <a href="mailto:info@remodixfl.com" className="underline hover:text-purple-900">info@remodixfl.com</a>
         </div>
       </section>
     </div>
