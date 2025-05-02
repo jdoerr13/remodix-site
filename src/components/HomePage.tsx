@@ -35,7 +35,7 @@ export default function HomePage() {
   return (
     <div className="font-brand text-gray-800 bg-gradient-to-b from-gray-100 to-purple-200 min-h-screen overflow-x-hidden">
       {/* Header */}
-      <header className="bg-white shadow-md">
+      <header className="sticky top-0 z-50 bg-white shadow-md">
         <div className="flex justify-between items-center px-4 sm:px-6 py-3">
             <h1 className="text-2xl font-bold tracking-wide text-purple-700">REMODIX</h1>
                 <nav className="flex gap-4 sm:gap-6 text-sm sm:text-base font-semibold text-gray-700">
