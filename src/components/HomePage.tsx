@@ -36,17 +36,17 @@ export default function HomePage() {
     <div className="font-brand text-gray-800 bg-gradient-to-b from-gray-100 to-purple-200 min-h-screen overflow-x-hidden">
       {/* Header */}
       <header className="bg-white shadow-md">
-  <div className="flex justify-between items-center px-4 sm:px-6 py-3">
-    <h1 className="text-2xl font-bold tracking-wide text-purple-700">REMODIX</h1>
-    <nav className="flex flex-wrap gap-4 sm:gap-6 text-sm sm:text-base font-semibold text-gray-700">
-  <Link href="#home" className="hover:underline">Home</Link>
-  <Link href="#about" className="hover:underline">About</Link>
-  <Link href="#services" className="hover:underline">Services</Link>
-  <Link href="#projects" className="hover:underline">Projects</Link>
-  <Link href="#contact" className="hover:underline">Contact</Link>
-</nav>
-  </div>
-</header>
+        <div className="flex justify-between items-center px-4 sm:px-6 py-3">
+            <h1 className="text-2xl font-bold tracking-wide text-purple-700">REMODIX</h1>
+                <nav className="flex gap-4 sm:gap-6 text-sm sm:text-base font-semibold text-gray-700">
+            <Link href="#home" className="hover:underline">Home</Link>
+            <Link href="#about" className="hover:underline">About</Link>
+            <Link href="#services" className="hover:underline">Services</Link>
+            <Link href="#projects" className="hover:underline">Projects</Link>
+            <Link href="#contact" className="hover:underline">Contact</Link>
+            </nav>
+        </div>
+    </header>
 
       {/* Hero Section */}
       <section
