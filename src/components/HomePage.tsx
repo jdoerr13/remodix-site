@@ -38,12 +38,12 @@ export default function HomePage() {
       <header className="sticky top-0 z-50 bg-white shadow-md">
         <div className="flex justify-between items-center px-4 sm:px-6 py-3">
             <h1 className="text-2xl font-bold tracking-wide text-purple-700">REMODIX</h1>
-                <nav className="flex gap-4 sm:gap-6 text-sm sm:text-base font-semibold text-gray-700">
-            <Link href="#home" className="hover:underline">Home</Link>
-            <Link href="#about" className="hover:underline">About</Link>
-            <Link href="#services" className="hover:underline">Services</Link>
-            <Link href="#projects" className="hover:underline">Projects</Link>
-            <Link href="#contact" className="hover:underline">Contact</Link>
+            <nav className="flex flex-wrap justify-center gap-2 sm:gap-4 text-sm sm:text-lg font-semibold text-gray-700 px-2 sm:px-0">
+                        <Link href="#home" className="hover:underline">Home</Link>
+                        <Link href="#about" className="hover:underline">About</Link>
+                        <Link href="#services" className="hover:underline">Services</Link>
+                        <Link href="#projects" className="hover:underline">Projects</Link>
+                        <Link href="#contact" className="hover:underline">Contact</Link>
             </nav>
         </div>
     </header>
