@@ -13,7 +13,7 @@ import Link from 'next/link';
 //   { id: 6, label: 'Custom Closets', before: '/images/before6.jpg', after: '/images/after6.jpg' }
 // ];
 
-const projectData = Array.from({ length: 30 }, (_, i) => ({
+const projectData = Array.from({ length: 20 }, (_, i) => ({
     id: i + 1,
     label: `Project ${i + 1}`,
     before: `/images/before${i + 1}.jpg`,
